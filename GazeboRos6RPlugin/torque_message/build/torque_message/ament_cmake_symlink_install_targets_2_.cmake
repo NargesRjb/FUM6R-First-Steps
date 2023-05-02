@@ -1,0 +1,1 @@
+ament_cmake_symlink_install_targets("TARGET_FILES" "/home/nargas/FUM6RProjectFiles/plugin/torque_message/build/torque_message/rosidl_generator_py/torque_message/torque_message_s__rosidl_typesupport_fastrtps_c.cpython-38-x86_64-linux-gnu.so" "TARGETS" "torque_message__rosidl_typesupport_fastrtps_c__pyext" "DESTINATION" "lib/python3.8/site-packages/torque_message")

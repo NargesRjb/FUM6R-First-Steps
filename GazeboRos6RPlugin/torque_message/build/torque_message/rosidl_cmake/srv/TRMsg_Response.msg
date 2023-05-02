@@ -1,0 +1,18 @@
+
+int8 status -1
+geometry_msgs/Vector3 r1v
+geometry_msgs/Vector3 r2v
+geometry_msgs/Vector3 r3v
+geometry_msgs/Vector3 r1t
+geometry_msgs/Vector3 r2t
+geometry_msgs/Vector3 r3t
+geometry_msgs/Vector3 r1p
+geometry_msgs/Vector3 r2p
+geometry_msgs/Vector3 r3p
+float64 r1
+float64 r2
+float64 r3
+float64 r4 
+float64 r5
+float64 r6
+sensor_msgs/Imu imu

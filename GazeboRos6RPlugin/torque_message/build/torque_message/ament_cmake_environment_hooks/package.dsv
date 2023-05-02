@@ -1,0 +1,4 @@
+source;share/torque_message/local_setup.bash
+source;share/torque_message/local_setup.dsv
+source;share/torque_message/local_setup.sh
+source;share/torque_message/local_setup.zsh

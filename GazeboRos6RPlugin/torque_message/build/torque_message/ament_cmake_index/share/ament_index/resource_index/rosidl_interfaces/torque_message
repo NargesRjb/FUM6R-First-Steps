@@ -1,0 +1,4 @@
+srv/TRMsg.idl
+srv/TRMsg.srv
+srv/TRMsg_Request.msg
+srv/TRMsg_Response.msg

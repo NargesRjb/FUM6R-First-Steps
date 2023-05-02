@@ -1,0 +1,60 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from torque_message/srv/TRMsg.srv
+// generated code does not contain a copyright notice
+
+#include "geometry_msgs/msg/Vector3.idl"
+#include "sensor_msgs/msg/Imu.idl"
+
+module torque_message {
+  module srv {
+    struct TRMsg_Request {
+      double t1;
+
+      double t2;
+
+      double t3;
+
+      double t4;
+
+      double t5;
+
+      double t6;
+    };
+    struct TRMsg_Response {
+      @default (value=-1)
+      int8 status;
+
+      geometry_msgs::msg::Vector3 r1v;
+
+      geometry_msgs::msg::Vector3 r2v;
+
+      geometry_msgs::msg::Vector3 r3v;
+
+      geometry_msgs::msg::Vector3 r1t;
+
+      geometry_msgs::msg::Vector3 r2t;
+
+      geometry_msgs::msg::Vector3 r3t;
+
+      geometry_msgs::msg::Vector3 r1p;
+
+      geometry_msgs::msg::Vector3 r2p;
+
+      geometry_msgs::msg::Vector3 r3p;
+
+      double r1;
+
+      double r2;
+
+      double r3;
+
+      double r4;
+
+      double r5;
+
+      double r6;
+
+      sensor_msgs::msg::Imu imu;
+    };
+  };
+};

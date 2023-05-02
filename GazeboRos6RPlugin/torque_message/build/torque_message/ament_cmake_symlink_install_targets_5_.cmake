@@ -1,0 +1,1 @@
+ament_cmake_symlink_install_targets("TARGET_FILES" "/home/nargas/FUM6RProjectFiles/plugin/torque_message/build/torque_message/rosidl_generator_py/torque_message/libtorque_message__python.so" "TARGETS" "torque_message__python" "ARCHIVE_DESTINATION" "lib" "LIBRARY_DESTINATION" "lib" "RUNTIME_DESTINATION" "bin")

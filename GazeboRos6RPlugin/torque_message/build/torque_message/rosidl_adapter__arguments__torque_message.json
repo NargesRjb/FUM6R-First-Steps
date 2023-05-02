@@ -1,0 +1,6 @@
+{
+  "package_name": "torque_message",
+  "non_idl_tuples": [
+    "/home/nargas/FUM6RProjectFiles/plugin/torque_message:srv/TRMsg.srv"
+  ]
+}
