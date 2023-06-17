@@ -1,0 +1,470 @@
+<?xml version="1.0"?>
+<robot name="FUM6R">
+
+  <link name= "world" />
+
+  <joint name= "worldJ0" type="fixed">
+      <origin xyz="0 0 0.65" rpy="0 0 0" />
+      <parent
+      link="world" />
+    <child
+      link="Table" />
+    <dynamics damping="10" friction="1.0"/>
+  </joint>
+
+  <link name="Table">
+    <inertial>
+      <origin
+        xyz="-1.8531E-16 -0.20987 4.0835E-17"
+        rpy="0 0 0" />
+      <mass
+        value="31.324" />
+      <inertia
+        ixx="2.5002"
+        ixy="-3.9398E-16"
+        ixz="1.8927E-16"
+        iyy="1.875"
+        iyz="-7.6572E-16"
+        izz="2.5002" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="/home/nargas/FUM6R-WS/src/Ros2ControlBringingUp/meshes/Table.STL" />
+      </geometry>
+      <material name="Black">
+          <color rgba="0 0 0 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="/home/nargas/FUM6R-WS/src/Ros2ControlBringingUp/meshes/Table.STL" />
+      </geometry>
+    </collision>
+  </link>
+  
+  <joint name="fixingtable"
+    type="fixed">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 -1.5708" />
+    <parent
+      link="Table" />
+    <child
+      link="6RL0" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+
+  <link name="6RL0">
+    <inertial>
+      <origin xyz="0.003 0 -0.005" rpy="0 0 0" />
+      <mass value="31.781" />
+      <inertia
+        ixx="0.376"
+        ixy="0"
+        ixz="-0.001"
+        iyy="0.364"
+        iyz="0"
+        izz="0.65" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="/home/nargas/FUM6R-WS/src/Ros2ControlBringingUp/meshes/6RL0.STL" />
+      </geometry>
+      <material name="Black">
+          <color rgba="0 0 0 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="/home/nargas/FUM6R-WS/src/Ros2ControlBringingUp/meshes/6RL0.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="6RL1">
+    <inertial>
+      <origin
+        xyz="-0.016 -0.02 0.195"
+        rpy="0 0 0" />
+      <mass
+        value="29.923" />
+      <inertia
+        ixx="0.557"
+        ixy="-0.009"
+        ixz="-0.018"
+        iyy="0.601"
+        iyz="-0.076"
+        izz="0.362" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="/home/nargas/FUM6R-WS/src/Ros2ControlBringingUp/meshes/6RL1.STL" />
+      </geometry>
+      <material name="Black">
+          <color rgba="0 0 0 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="/home/nargas/FUM6R-WS/src/Ros2ControlBringingUp/meshes/6RL1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="6RJ1" type="revolute">
+    <origin
+      xyz="0 0 0.0635"
+      rpy="0 0 0" />
+    <parent
+      link="6RL0" />
+    <child
+      link="6RL1" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-1.79769e+308"
+      upper="1.79769e+308"
+      effort="-1"
+      velocity="-1" />
+    <dynamics damping="10" friction="1.0"/>
+  </joint>
+  <link name="6RL2">
+    <inertial>
+      <origin
+        xyz="0.183 0 0.082"
+        rpy="0 0 0" />
+      <mass
+        value="16.89" />
+      <inertia
+        ixx="0.067"
+        ixy="0"
+        ixz="0.044"
+        iyy="1"
+        iyz="0"
+        izz="1.034" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="/home/nargas/FUM6R-WS/src/Ros2ControlBringingUp/meshes/6RL2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.89804 0.91765 0.92941 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="/home/nargas/FUM6R-WS/src/Ros2ControlBringingUp/meshes/6RL2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="6RJ2" type="revolute">
+    <origin
+      xyz="0 0 0.326"
+      rpy="4.7124 -1.5708 0" />
+    <parent
+      link="6RL1" />
+    <child
+      link="6RL2" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-1.79769e+308"
+      upper="1.79769e+308"
+      effort="-1"
+      velocity="-1" />
+    <dynamics damping="10" friction="1.0"/>
+  </joint>
+  <link name="6RL3">
+    <inertial>
+      <origin
+        xyz="0.128 0.002 -0.003"
+        rpy="0 0 0" />
+      <mass
+        value="24.16" />
+      <inertia
+        ixx="0.618"
+        ixy="-0.007"
+        ixz="0.019"
+        iyy="0.331"
+        iyz="-0.005"
+        izz="0.791" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="/home/nargas/FUM6R-WS/src/Ros2ControlBringingUp/meshes/6RL3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.89804 0.91765 0.92941 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="/home/nargas/FUM6R-WS/src/Ros2ControlBringingUp/meshes/6RL3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="6RJ3" type="revolute">
+    <origin
+      xyz="0.6 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="6RL2" />
+    <child
+      link="6RL3" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-1.79769e+308"
+      upper="1.79769e+308"
+      effort="-1"
+      velocity="-1" />
+    <dynamics damping="10" friction="1.0"/>
+  </joint>
+  <link name="6RL4">
+    <inertial>
+      <origin
+        xyz="0 0.015 0.562"
+        rpy="0 0 0" />
+      <mass
+        value="4.742" />
+      <inertia
+        ixx="0.04"
+        ixy="0"
+        ixz="0"
+        iyy="0.032"
+        iyz="0.004"
+        izz="0.018" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="/home/nargas/FUM6R-WS/src/Ros2ControlBringingUp/meshes/6RL4.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.89804 0.91765 0.92941 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="/home/nargas/FUM6R-WS/src/Ros2ControlBringingUp/meshes/6RL4.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="6RJ4" type="revolute">
+    <origin
+      xyz="0.2 0 0"
+      rpy="-1.5708 0 0" />
+    <parent
+      link="6RL3" />
+    <child
+      link="6RL4" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-1.79769e+308"
+      upper="1.79769e+308"
+      effort="-1"
+      velocity="-1" />
+    <dynamics damping="10" friction="1.0"/>
+  </joint>
+  <link name="6RL5">
+    <inertial>
+      <origin
+        xyz="-0.003 0.02 -0.013"
+        rpy="0 0 0" />
+      <mass
+        value="2.615" />
+      <inertia
+        ixx="0.007"
+        ixy="0"
+        ixz="0"
+        iyy="0.006"
+        iyz="0"
+        izz="0.008" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="/home/nargas/FUM6R-WS/src/Ros2ControlBringingUp/meshes/6RL5.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.89804 0.91765 0.92941 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="/home/nargas/FUM6R-WS/src/Ros2ControlBringingUp/meshes/6RL5.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="6RJ5" type="revolute">
+    <origin
+      xyz="0 0 0.6855"
+      rpy="1.5708 0 0" />
+    <parent
+      link="6RL4" />
+    <child
+      link="6RL5" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-1.79769e+308"
+      upper="1.79769e+308"
+      effort="-1"
+      velocity="-1" />
+    <dynamics damping="10" friction="1.0"/>
+  </joint>
+  <link name="6RL6">
+    <inertial>
+      <origin
+        xyz="0 0 0.029"
+        rpy="0 0 0" />
+      <mass
+        value="0.955" />
+      <inertia
+        ixx="0.001"
+        ixy="0"
+        ixz="0"
+        iyy="0.001"
+        iyz="0"
+        izz="0.001" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="/home/nargas/FUM6R-WS/src/Ros2ControlBringingUp/meshes/6RL6.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.89804 0.91765 0.92941 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="/home/nargas/FUM6R-WS/src/Ros2ControlBringingUp/meshes/6RL6.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="6RJ6" type="revolute">
+    <origin
+      xyz="0 0.079 0"
+      rpy="-1.5708 0 0" />
+    <parent
+      link="6RL5" />
+    <child
+      link="6RL6" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-1.79769e+308"
+      upper="1.79769e+308"
+      effort="-1"
+      velocity="-1" />
+    <dynamics damping="10" friction="1.0"/>
+  </joint>
+
+
+  <gazebo reference="Table">
+    <material>Gazebo/FlatBlack</material>
+  </gazebo>
+  
+  <gazebo reference="6RL0">
+    <material>Gazebo/FlatBlack</material>
+  </gazebo>
+
+
+  <gazebo reference="6RL1">
+    <material>Gazebo/FlatBlack</material>
+  </gazebo>
+
+  <gazebo reference="6RL2">
+    <material>Gazebo/Orange</material>
+  </gazebo>
+
+  <gazebo reference="6RL3">
+    <material>Gazebo/Orange</material>
+  </gazebo>
+
+  <gazebo reference="6RL4">
+    <material>Gazebo/FlatBlack</material>
+  </gazebo>
+
+  <gazebo reference="6RL5">
+    <material>Gazebo/FlatBlack</material>
+  </gazebo>
+
+  <gazebo reference="6RL6">
+    <material>Gazebo/FlatBlack</material>
+  </gazebo>
+
+
+</robot>
